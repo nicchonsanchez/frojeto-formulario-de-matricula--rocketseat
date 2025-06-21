@@ -22,7 +22,9 @@ label{
     margin-bottom: 0.25rem;
 }
 
-input, select, textarea{
+input,
+select,
+textarea{
     appearance: none;
     color: var(--text-primary);
     font: inherit;
@@ -32,7 +34,10 @@ input, select, textarea{
     border: 1px solid var(--stroke-default);
 }
 
-input:hover, select:hover, textarea:hover{
+input:hover,
+select:hover,
+textarea:hover,
+input[type="date"]:focus-within{
     outline: .25rem solid var(--surface-secondary);
     outline-offset: .1px;
     border: .125rem solid var(--stroke-highlight);
@@ -59,4 +64,41 @@ input[type="date"]{
 
 select{
     background: url(../assets/icons/arrow-down-01.svg) no-repeat calc(100% - 1rem);
+}
+
+.droparea-wrapper{
+    border: 1px dashed var(--stroke-default);
+    border-radius: 0.5rem;
+    display: grid;
+    justify-items: center;
+    gap: .5rem;
+
+    text-align: center;
+    padding: 1.75rem 1rem;
+
+    position: relative;
+
+    & input{
+        cursor: pointer;
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+    }
+
+    & p{
+        color: #A8A29E;
+    }
+
+    &:hover, &:has(input:focus){
+        border-width: 2px;
+        border-color: var(--stroke-highlight);
+        background-color: var(--surface-secondary);
+
+        & svg path{
+            stroke: var(--stroke-highlight);
+        }
+        & p{
+            color: var(--text-tertiary);
+        }
+    }
 }
