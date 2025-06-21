@@ -1,0 +1,38 @@
+@import url(global.css);
+
+form{
+    margin-top: 3rem;
+}
+
+fieldset{
+    border: none;
+    display: grid;
+    gap: 1.5rem;
+}
+
+legend{
+    font: 600 1rem/1.25 var(--font-family);
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+}
+
+label{
+    font: 400 0.875rem/1.4 var(--font-family);
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+input, select, textarea{
+    color: var(--text-primary);
+    font: inherit;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    border: 1px solid var(--stroke-default);
+}
+
+input:hover, select:hover, textarea:hover{
+    outline: .25rem solid var(--surface-secondary);
+    outline-offset: .1px;
+    border: .125rem solid var(--stroke-highlight);
+}
