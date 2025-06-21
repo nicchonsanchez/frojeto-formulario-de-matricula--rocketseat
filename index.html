@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estrelas do Amanhã - Formulário de matrícula</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/layout.css">
 </head>
+
 <body>
     <div id="app">
         <main>
@@ -21,7 +25,45 @@
                     <span>Voltar</span>
                 </div>
                 <h1>Formulário de matrícula</h1>
-                <p>Preencha os dados abaixo para matricular seu filho na escola de educação infantil Estrelas do Amanhã.</p>
+                <p>Preencha os dados abaixo para matricular seu filho na escola de educação infantil Estrelas do Amanhã.
+                </p>
+
+                <form action="#" enctype="multipart/form-data" method="post">
+                    <fieldset>
+                        <legend>Informações da criança</legend>
+                        <div class="input-wrapper">
+                            <label for="fullname">Nome completo</label>
+                            <input type="text" name="fullname" id="fullname" placeholder="Qual é o nome da criança?">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="birth">Data de nascimento</label>
+                            <input type="date" name="birth" id="birth" lang="pt-BR">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="gender">Sexo</label>
+                            <select name="gender" id="gender">
+                                <option value="male">Masculino</option>
+                                <option value="female">Feminino</option>
+                            </select>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="medical-info">Informações médicas</label>
+                            <textarea id="medical-info" cols="30" rows="10"
+                                placeholder="A criança possui algums alergia, faz uso contínuo de algum medicamento, poussui alguma condição especial ou algo do tipo?"></textarea>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <label for="">Certidão de nascimento</label>
+                            <div class="droparea-wrapper">
+                                <input type="file" name="birth-file" id="birth-file">
+                                <img src="./assets/icons/cloud-upload.svg" alt="">
+                                <p>
+                                    Clique aqui para <br> selecionar arquivos
+                                </p>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
             </div>
             <!-- /.main-container -->
         </main>
@@ -30,13 +72,16 @@
                 <header>
                     <img src="./assets/logo.svg" alt="Logomarca das Estrlas do Amanhã">
                     <h2>Porque cada momento de <span>aprendizado</span> conta</h2>
-                    <p>Inscreva seu filho em nossa escola e veja-o florescer em um ambiente acolhedor, seguro e estimulante.</p>
+                    <p>Inscreva seu filho em nossa escola e veja-o florescer em um ambiente acolhedor, seguro e
+                        estimulante.</p>
                 </header>
 
-                <img src="./assets/Illustration.svg" alt="Ilustração de uma professora sentada no chão fazendo desenhos com quatro crianças">
+                <img src="./assets/Illustration.svg"
+                    alt="Ilustração de uma professora sentada no chão fazendo desenhos com quatro crianças">
             </div>
             <!-- /.aside-conteiner -->
         </aside>
     </div>
 </body>
+
 </html>
